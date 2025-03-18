@@ -1,0 +1,180 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importação das fontes personalizadas */
+@font-face {
+    font-family: 'Aceh Light';
+    src: url('/assets/fonts/Aceh-Light.woff2') format('woff2'),
+         url('/assets/fonts/Aceh-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Le Major';
+    src: url('/assets/fonts/LeMajor-Regular.woff2') format('woff2'),
+         url('/assets/fonts/LeMajor-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #141E33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 60px;
+}
+
+/* Estilos do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.header-title {
+    font-family: 'Aceh Light', sans-serif;
+    color: #D4AF37;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Estilos do logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+    max-width: 90%;
+}
+
+/* Container principal centralizado */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Estilos das redes sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #D4AF37;
+}
+
+/* Botão sobre mim */
+.cta-button {
+    font-family: 'Le Major', serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 1px solid #D4AF37;
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+    margin-top: 40px;
+}
+
+.cta-button:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    body {
+        padding-top: 40px;
+    }
+    
+    .header-title {
+        font-size: 12px;
+    }
+    
+    .logo {
+        width: 280px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-links a {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 16px;
+    }
+    
+    .logo {
+        width: 400px;
+    }
+}
+
+/* Adicione este CSS para a animação de rotação */
+.logo-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-rotating {
+    position: absolute;
+    width: 350px; /* Tamanho do círculo rotativo */
+    height: 350px;
+    animation: rotate 25s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

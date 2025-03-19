@@ -35,5 +35,28 @@
             SOBRE MIM
         </a>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; <span id="current-year"></span> Luiz Gustavo - Todos os direitos reservados
+            </div>
+            <div class="footer-links">
+                <a href="mailto:luizgustavo.dev01@gmail.com" aria-label="Email" class="footer-link">
+                    <i class="far fa-envelope"></i> luizgustavo.dev01@gmail.com
+                </a>
+                <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <i class="fab fa-github"></i> LuizTh3
+                </a>
+            </div>
+            <div class="developer">
+                Desenvolvido por <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer">Luiz Gustavo Dev</a>
+            </div>
+        </div>
+        <script>
+            // Script para atualizar o ano automaticamente
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 </html>

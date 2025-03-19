@@ -35,6 +35,9 @@ body {
     min-height: 100vh;
     padding: 20px;
     padding-top: 60px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Estilos do cabeçalho */
@@ -42,7 +45,7 @@ header {
     text-align: center;
     margin-bottom: 40px;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .header-title {
@@ -56,17 +59,21 @@ header {
 
 /* Estilos do logo */
 .logo-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
-    width: 100%;
 }
 
 .logo {
-    width: 350px;
+    width: 100%;
     height: auto;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 /* Container principal centralizado */
@@ -76,7 +83,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 /* Estilos das redes sociais */
@@ -85,6 +92,7 @@ main {
     justify-content: center;
     gap: 30px;
     margin: 30px 0;
+    width: 100%;
 }
 
 .social-links a {
@@ -128,8 +136,8 @@ main {
         font-size: 12px;
     }
     
-    .logo {
-        width: 280px;
+    .logo-container {
+        max-width: 280px;
     }
     
     .social-links {
@@ -146,26 +154,16 @@ main {
         font-size: 16px;
     }
     
-    .logo {
-        width: 400px;
+    .logo-container {
+        max-width: 350px;
     }
 }
 
 /* Adicione este CSS para a animação de rotação */
-.logo-container {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo-rotating {
     position: absolute;
-    width: 350px; /* Tamanho do círculo rotativo */
-    height: 350px;
+    width: 100%;
+    height: auto;
     animation: rotate 25s linear infinite;
     z-index: 1;
 }

@@ -85,8 +85,20 @@
 
 .about-content {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
+    flex-direction: column; /* Altera para uma direção de coluna */
+    gap: 30px;
+}
+
+.about-header-content {
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.about-main-content {
+    display: flex;
+    flex-direction: row; /* Conteúdo principal em linha */
+    gap: 40px;
     align-items: flex-start;
 }
 
@@ -277,7 +289,7 @@
     }
     
     .about-main-content {
-        margin-top: 20px;
+        flex-direction: column; /* Em dispositivos móveis, volta para coluna */
     }
     
     .about-main {

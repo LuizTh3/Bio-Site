@@ -1,0 +1,314 @@
+/* Estilos específicos para a página about-me.html */
+
+.about-page {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Header estilizado */
+.about-header {
+    background-color: #141E33;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo-header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-family: 'Aceh Light', 'Montserrat', sans-serif;
+    color: #D4AF37;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #D4AF37;
+}
+
+/* Conteúdo principal */
+.about-main {
+    margin-top: 100px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section {
+    padding: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.section-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.about-title {
+    font-family: 'Le Major', 'Montserrat', serif;
+    color: #141E33;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.about-crp {
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.about-paragraph {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-signature {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+.about-name {
+    font-family: 'Le Major', 'Montserrat', serif;
+    font-size: 18px;
+    color: #141E33;
+    font-weight: 600;
+}
+
+.about-profession {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+.about-image {
+    flex: 0 0 40%;
+    max-width: 500px;
+}
+
+.about-image-mobile{
+    display: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu hambúrguer para dispositivos móveis */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-icon {
+    width: 20px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #D4AF37;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para o menu hambúrguer ativo */
+.hamburger-menu.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajustes existentes mantidos */
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 35px;
+    }
+    
+    .header-container {
+        padding: 15px;
+        position: relative;
+    }
+    
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #141E33;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .logo-header {
+        margin-bottom: 0;
+    }
+    
+    /* Modificando o layout da seção Sobre */
+    .about-content {
+        display: block;
+    }
+    
+    /* Posicionando os elementos corretamente */
+    .about-header-content {
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-image-mobile {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100%;
+    }
+    
+    .about-image-mobile img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-main-content {
+        margin-top: 20px;
+    }
+    
+    .about-main {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-main {
+        margin-top: 80px;
+        padding: 20px 15px;
+    }
+    
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .logo-text {
+        font-size: 16px;
+    }
+    
+    .header-logo {
+        width: 72px;
+        height: 72px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+}

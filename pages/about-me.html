@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Psicóloga Vitória de Almeida</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/about-me.css">
+    <!-- Importação de fontes externas -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="about-page">
+    <header class="about-header">
+        <div class="header-container">
+            <div class="logo-header">
+                <a href="../index.html">
+                    <img src="../assets/images/Elemento da marca 2.jpg" alt="Logotipo VA Vitória de Almeida"
+                        class="header-logo">
+                    <span class="logo-text">Vitória de Almeida</span>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about-me.html" class="active">Sobre</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <!-- <li><a href="contact.html">Contato</a></li> -->
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="about-main">
+        <section class="about-section">
+            <div class="about-content">
+                <!-- Cabeçalho (título, subtítulo, CRP) -->
+                <div class="about-header-content">
+                    <h2 class="section-subtitle">Quem é</h2>
+                    <h1 class="about-title"><nobr>Vitória de</nobr> Almeida</h1>
+                    <p class="about-crp">CRP 24/05578</p>
+                </div>
+                
+                <!-- Imagem -->
+                <div class="about-image-mobile">
+                    <img src="../assets/images/PsiVitoria.jpg" alt="Psicóloga Vitória de Almeida">
+                </div>
+                
+                <!-- Conteúdo principal -->
+                <div class="about-main-content">
+                    <p class="about-paragraph">
+                        Olá, eu sou Vitória de Almeida, psicóloga, e estou aqui para acompanhá-lo em sua jornada de
+                        autoconhecimento e transformação pessoal. Minha abordagem terapêutica é fundamentada na Terapia
+                        Cognitiva Comportamental (TCC), uma metodologia eficaz que visa ajudar você a compreender e
+                        modificar padrões de pensamento e comportamento que podem estar impedindo seu bem-estar.
+                    </p>
+        
+                    <p class="about-paragraph">
+                        Com uma pós-graduação em Avaliação Psicológica e Psicoterapia Clínica, estou preparada para
+                        oferecer um atendimento acolhedor e personalizado, sempre respeitando sua singularidade e
+                        necessidades. Acredito que cada pessoa possui um conjunto único de experiências e desafios, e
+                        meu papel é auxiliá-lo a encontrar o caminho mais adequado para o seu crescimento.
+                    </p>
+        
+                    <p class="about-paragraph">
+                        Se você está buscando entender melhor suas próprias questões, desenvolver habilidades emocionais
+                        estou aqui para ajudar. Sinta-se à vontade para entrar em contato e agendar uma conversa.
+                        Juntos, podemos traçar um caminho rumo ao seu bem-estar e realização pessoal.
+                    </p>
+        
+                    <p class="about-signature">
+                        Aguardo sua visita!
+                    </p>
+        
+                    <p class="about-name">
+                        Vitória de Almeida<br>
+                        <span class="about-profession">Psicóloga CRP 24/05578</span>
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="../assets/images/PsiVitoria.jpg" alt="Psicóloga Vitória de Almeida">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; <span id="current-year"></span> Psicóloga Vitória de Almeida - Todos os direitos reservados
+            </div>
+            <div class="footer-links">
+                <a href="mailto:luizgustavo.dev01@gmail.com" aria-label="Email" class="footer-link">
+                    <i class="far fa-envelope"></i> luizgustavo.dev01@gmail.com
+                </a>
+                <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <i class="fab fa-github"></i> LuizTh3
+                </a>
+            </div>
+            <div class="developer">
+                Desenvolvido por <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer">Luiz Gustavo Dev</a>
+            </div>
+        </div>
+        <script>
+            // Script para atualizar o ano automaticamente
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const mainNav = document.querySelector('.main-nav');
+                
+                hamburgerMenu.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+                
+                // Fechar o menu ao clicar em um link
+                const navLinks = document.querySelectorAll('.main-nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburgerMenu.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    });
+                });
+                
+                // Fechar o menu ao clicar fora dele
+                document.addEventListener('click', function(event) {
+                    if (!hamburgerMenu.contains(event.target) && !mainNav.contains(event.target)) {
+                        hamburgerMenu.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+    </footer>
+</body>
+
+</html>

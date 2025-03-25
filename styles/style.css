@@ -1,11 +1,15 @@
-/* Reset e estilos gerais */
+/* ------------------------------------------------ */
+/* Reset e Configurações Globais */
+/* ------------------------------------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Importação das fontes personalizadas */
+/* ------------------------------------------------ */
+/* Definições de Fontes Personalizadas */
+/* ------------------------------------------------ */
 @font-face {
     font-family: 'Aceh Light';
     src: url('/assets/fonts/Aceh-Light.woff2') format('woff2'),
@@ -24,6 +28,9 @@
     font-display: swap;
 }
 
+/* ------------------------------------------------ */
+/* Estilos do Body e Layout Geral */
+/* ------------------------------------------------ */
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.6;
@@ -40,7 +47,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Estilos do cabeçalho */
+/* ------------------------------------------------ */
+/* Estilos do Cabeçalho */
+/* ------------------------------------------------ */
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -57,7 +66,9 @@ header {
     margin-bottom: 30px;
 }
 
-/* Estilos do logo */
+/* ------------------------------------------------ */
+/* Estilos do Logo */
+/* ------------------------------------------------ */
 .logo-container {
     position: relative;
     width: 100%;
@@ -76,7 +87,22 @@ header {
     max-width: 100%;
 }
 
-/* Container principal centralizado */
+.logo-rotating {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    animation: rotate 25s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ------------------------------------------------ */
+/* Estilos do Conteúdo Principal */
+/* ------------------------------------------------ */
 main {
     display: flex;
     flex-direction: column;
@@ -86,7 +112,9 @@ main {
     max-width: 100%;
 }
 
-/* Estilos das redes sociais */
+/* ------------------------------------------------ */
+/* Links de Redes Sociais */
+/* ------------------------------------------------ */
 .social-links {
     display: flex;
     justify-content: center;
@@ -106,7 +134,9 @@ main {
     color: #D4AF37;
 }
 
-/* Botão sobre mim */
+/* ------------------------------------------------ */
+/* Botão Chamada (CTA) */
+/* ------------------------------------------------ */
 .cta-button {
     font-family: 'Le Major', serif;
     display: inline-flex;
@@ -126,57 +156,9 @@ main {
     background-color: rgba(212, 175, 55, 0.2);
 }
 
-/* Responsividade */
-@media (max-width: 576px) {
-    body {
-        padding-top: 40px;
-    }
-    
-    .header-title {
-        font-size: 12px;
-    }
-    
-    .logo-container {
-        max-width: 280px;
-    }
-    
-    .social-links {
-        gap: 15px;
-    }
-    
-    .social-links a {
-        font-size: 25px;
-    }
-}
-
-@media (min-width: 768px) {
-    .header-title {
-        font-size: 16px;
-    }
-    
-    .logo-container {
-        max-width: 350px;
-    }
-}
-
-/* Adicione este CSS para a animação de rotação */
-.logo-rotating {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    animation: rotate 25s linear infinite;
-    z-index: 1;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
+/* ------------------------------------------------ */
+/* Rodapé (Footer) */
+/* ------------------------------------------------ */
 .footer {
     width: 100%;
     background-color: #0d1625;
@@ -239,9 +221,42 @@ main {
     color: #ffffff;
 }
 
-@media (min-width: 576px) {
+/* ------------------------------------------------ */
+/* Media Queries (Responsividade) */
+/* ------------------------------------------------ */
+@media (max-width: 576px) {
+    body {
+        padding-top: 40px;
+    }
+    
+    .header-title {
+        font-size: 12px;
+    }
+    
+    .logo-container {
+        max-width: 280px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-links a {
+        font-size: 25px;
+    }
+
     .footer-links {
         flex-direction: row;
         gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 16px;
+    }
+    
+    .logo-container {
+        max-width: 350px;
     }
 }

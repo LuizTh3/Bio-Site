@@ -48,42 +48,43 @@
                 <!-- Cabeçalho (título, subtítulo, CRP) -->
                 <div class="about-header-content">
                     <h2 class="section-subtitle">Quem é</h2>
-                    <h1 class="about-title"><nobr>Vitória de</nobr> Almeida</h1>
+                    <h1 class="about-title">
+                        <nobr>Vitória de</nobr> Almeida
+                    </h1>
                     <p class="about-crp">CRP 24/05578</p>
                 </div>
-                
+
                 <!-- Imagem para dispositivos móveis -->
                 <div class="about-image-mobile">
                     <img src="../assets/images/PsiVitoria.jpg" alt="Psicóloga Vitória de Almeida">
                 </div>
-                
+
                 <!-- Conteúdo principal com texto e imagem lado a lado -->
                 <div class="about-main-content">
                     <div class="about-text">
                         <p class="about-paragraph">
                             Olá, eu sou Vitória de Almeida, psicóloga, e estou aqui para acompanhá-lo em sua jornada de
-                            autoconhecimento e transformação pessoal. Minha abordagem terapêutica é fundamentada na Terapia
+                            autoconhecimento e transformação pessoal. Minha abordagem terapêutica é fundamentada na
+                            Terapia
                             Cognitiva Comportamental (TCC), uma metodologia eficaz que visa ajudar você a compreender e
                             modificar padrões de pensamento e comportamento que podem estar impedindo seu bem-estar.
                         </p>
-            
+
                         <p class="about-paragraph">
-                            Com uma pós-graduação em Avaliação Psicológica e Psicoterapia Clínica, estou preparada para
-                            oferecer um atendimento acolhedor e personalizado, sempre respeitando sua singularidade e
-                            necessidades. Acredito que cada pessoa possui um conjunto único de experiências e desafios, e
-                            meu papel é auxiliá-lo a encontrar o caminho mais adequado para o seu crescimento.
+                            Além disso, sou pós-graduanda em Neuropsicologia, Psicopedagogia e Educação Especial e
+                            Inclusiva, Neuropsicopedagogia Institucional e Clínica. Essas especializações me permitem
+                            integrar diferentes aprendizagens para promover um atendimento personalizado e eficaz,
+                            focado no desenvolvimento e bem-estar de cada indivíduo.
                         </p>
-            
+
                         <p class="about-paragraph">
-                            Se você está buscando entender melhor suas próprias questões, desenvolver habilidades emocionais
-                            estou aqui para ajudar. Sinta-se à vontade para entrar em contato e agendar uma conversa.
-                            Juntos, podemos traçar um caminho rumo ao seu bem-estar e realização pessoal.
+                            Atualmente, atendendo principalmente crianças e adolescentes, buscando atender às suas necessidades de forma única e acolhedora.
                         </p>
-            
+
                         <p class="about-signature">
                             Aguardo sua visita!
                         </p>
-            
+
                         <p class="about-name">
                             Vitória de Almeida<br>
                             <span class="about-profession">Psicóloga CRP 24/05578</span>
@@ -99,45 +100,59 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="copyright">
-                &copy; <span id="current-year"></span> Psicóloga Vitória de Almeida - Todos os direitos reservados
+            <div class="footer-top">
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <div class="contact-details">
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+551998448-3865">(68) 98416-4760</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Av. Getúlio Vargas, 1227 - Bosque,
+                            Rio Branco - AC, 69900-466, Brasil
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="mailto:luizgustavo.dev01@gmail.com" aria-label="Email" class="footer-link">
-                    <i class="far fa-envelope"></i> luizgustavo.dev01@gmail.com
-                </a>
-                <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer" class="footer-link">
-                    <i class="fab fa-github"></i> LuizTh3
-                </a>
-            </div>
-            <div class="developer">
-                Desenvolvido por <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer">Luiz Gustavo Dev</a>
+            <div class="footer-bottom">
+                <div class="footer-developer">
+                    Desenvolvido por
+                    <a href="https://github.com/LuizTh3" target="_blank" rel="noopener noreferrer">
+                        Luiz Gustavo Dev
+                    </a>
+                </div>
+                <p class="copyright">
+                    &copy; <span id="current-year"></span> Psicóloga Vitória de Almeida
+                    - Todos os direitos reservados
+                </p>
             </div>
         </div>
         <script>
             // Script para atualizar o ano automaticamente
             document.getElementById('current-year').textContent = new Date().getFullYear();
-            
-            document.addEventListener('DOMContentLoaded', function() {
+
+            document.addEventListener('DOMContentLoaded', function () {
                 const hamburgerMenu = document.querySelector('.hamburger-menu');
                 const mainNav = document.querySelector('.main-nav');
-                
-                hamburgerMenu.addEventListener('click', function() {
+
+                hamburgerMenu.addEventListener('click', function () {
                     this.classList.toggle('active');
                     mainNav.classList.toggle('active');
                 });
-                
+
                 // Fechar o menu ao clicar em um link
                 const navLinks = document.querySelectorAll('.main-nav a');
                 navLinks.forEach(link => {
-                    link.addEventListener('click', function() {
+                    link.addEventListener('click', function () {
                         hamburgerMenu.classList.remove('active');
                         mainNav.classList.remove('active');
                     });
                 });
-                
+
                 // Fechar o menu ao clicar fora dele
-                document.addEventListener('click', function(event) {
+                document.addEventListener('click', function (event) {
                     if (!hamburgerMenu.contains(event.target) && !mainNav.contains(event.target)) {
                         hamburgerMenu.classList.remove('active');
                         mainNav.classList.remove('active');

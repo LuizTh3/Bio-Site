@@ -1,11 +1,14 @@
-/* Estilos específicos para a página about-me.html */
-
+/* ------------------------------------------------ */
+/* Estilos Gerais da Página About Me */
+/* ------------------------------------------------ */
 .about-page {
     background-color: #ffffff;
     color: #333333;
 }
 
-/* Header estilizado */
+/* ------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------ */
 .about-header {
     background-color: #141E33;
     padding: 20px 0;
@@ -50,6 +53,9 @@
     font-weight: 400;
 }
 
+/* ------------------------------------------------ */
+/* Navegação Principal */
+/* ------------------------------------------------ */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -70,7 +76,9 @@
     color: #D4AF37;
 }
 
-/* Conteúdo principal */
+/* ------------------------------------------------ */
+/* Conteúdo Principal */
+/* ------------------------------------------------ */
 .about-main {
     margin-top: 100px;
     padding: 40px 20px;
@@ -85,19 +93,19 @@
 
 .about-content {
     display: flex;
-    flex-direction: column; /* Altera para uma direção de coluna */
+    flex-direction: column;
     gap: 30px;
 }
 
 .about-header-content {
-    text-align: center; /* Centraliza os títulos */
+    text-align: center;
     margin-bottom: 30px;
     width: 100%;
 }
 
 .about-main-content {
     display: flex;
-    flex-direction: row; /* Conteúdo principal em linha */
+    flex-direction: row;
     gap: 40px;
     align-items: flex-start;
 }
@@ -106,6 +114,9 @@
     flex: 1;
 }
 
+/* ------------------------------------------------ */
+/* Tipografia e Elementos de Texto */
+/* ------------------------------------------------ */
 .section-subtitle {
     font-family: 'Montserrat', sans-serif;
     color: #D4AF37;
@@ -159,12 +170,15 @@
     font-weight: normal;
 }
 
+/* ------------------------------------------------ */
+/* Imagem About */
+/* ------------------------------------------------ */
 .about-image {
     flex: 0 0 40%;
     max-width: 500px;
 }
 
-.about-image-mobile{
+.about-image-mobile {
     display: none;
 }
 
@@ -175,7 +189,9 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Menu hambúrguer para dispositivos móveis */
+/* ------------------------------------------------ */
+/* Menu Hambúrguer */
+/* ------------------------------------------------ */
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -200,7 +216,6 @@
     transition: all 0.3s ease;
 }
 
-/* Estilos para o menu hambúrguer ativo */
 .hamburger-menu.active .hamburger-icon span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
@@ -213,9 +228,86 @@
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Responsividade */
+/* ------------------------------------------------ */
+/* Rodapé */
+/* ------------------------------------------------ */
+.footer {
+    background-color: #141E33;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-contact h4 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-details i {
+    color: #D4AF37;
+    margin-right: 10px;
+}
+
+.contact-details a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #D4AF37;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+.footer-developer {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.footer-developer a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-developer a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+/* ------------------------------------------------ */
+/* Media Queries (Responsividade) */
+/* ------------------------------------------------ */
 @media (max-width: 768px) {
-    /* Ajustes existentes mantidos */
     .hamburger-menu {
         display: block;
         position: absolute;
@@ -262,12 +354,10 @@
         margin-bottom: 0;
     }
     
-    /* Modificando o layout da seção Sobre */
     .about-content {
         display: block;
     }
     
-    /* Posicionando os elementos corretamente */
     .about-header-content {
         margin-bottom: 20px;
     }
@@ -289,11 +379,17 @@
     }
     
     .about-main-content {
-        flex-direction: column; /* Em dispositivos móveis, volta para coluna */
+        flex-direction: column;
     }
     
     .about-main {
         margin-top: 90px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 }
 
